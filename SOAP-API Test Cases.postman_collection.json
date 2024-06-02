@@ -35,7 +35,35 @@
 			"response": []
 		},
 		{
-			"name": "#TC2-Passing a String as input",
+			"name": "#TC2-Negative Test Case without header",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "null"
+					},
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <NumberToWords xmlns=\"http://www.dataaccess.com/webservicesserver/\">\r\n      <ubiNum>183</ubiNum>\r\n    </NumberToWords>\r\n  </soap:Body>\r\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": "https://www.dataaccess.com/webservicesserver/NumberConversion.wso"
+			},
+			"response": []
+		},
+		{
+			"name": "#TC3-Passing a String as input",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -58,7 +86,7 @@
 			"response": []
 		},
 		{
-			"name": "#TC3-Passing a Character as input",
+			"name": "#TC4-Passing a Character as input",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -81,7 +109,7 @@
 			"response": []
 		},
 		{
-			"name": "#TC4-Passing a Negative Number as input",
+			"name": "#TC5-Passing a Negative Number as input",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -104,7 +132,7 @@
 			"response": []
 		},
 		{
-			"name": "#TC5-Passing a Decimal Number as input",
+			"name": "#TC6-Passing a Decimal Number as input",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -127,7 +155,7 @@
 			"response": []
 		},
 		{
-			"name": "#TC6-Passing Alpha Numeric Sring as input",
+			"name": "#TC7-Passing Alpha Numeric Sring as input",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -150,7 +178,7 @@
 			"response": []
 		},
 		{
-			"name": "#TC7-Passing a Binary Number as input",
+			"name": "#TC8-Passing a Binary Number as input",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -173,7 +201,7 @@
 			"response": []
 		},
 		{
-			"name": "#TC8-Passing a combination of Special Characters as input",
+			"name": "#TC9-Passing a combination of Special Characters as input",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -196,7 +224,7 @@
 			"response": []
 		},
 		{
-			"name": "#TC9-Passing a very large number",
+			"name": "#TC10-Passing a very large number",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -219,7 +247,7 @@
 			"response": []
 		},
 		{
-			"name": "#TC10-Empty input field",
+			"name": "#TC11-Empty input field",
 			"request": {
 				"method": "POST",
 				"header": [
